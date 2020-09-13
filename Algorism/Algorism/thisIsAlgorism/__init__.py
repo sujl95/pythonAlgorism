@@ -195,3 +195,174 @@
 #     print("출력 완료")
 # print("조건문 끝")
 
+# 성적 구간에 따른 학점 출력 예시
+
+# score = 85
+#
+# arr = ["A","B","C","F"]
+#
+# if score >= 90:
+#     print("학점: "+arr[0])
+# elif score >= 80:
+#     print("학점: "+arr[1])
+# elif score >= 70:
+#     print("학점: "+arr[2])
+# else :
+#     print("학점: "+arr[3])
+
+# a = 7
+# if 0 <= a and a <= 10:
+#     print("a는 0이상 10 이하입니다.")
+
+
+# a = 10
+#
+# if a > 5:
+#     pass # 나중에 작성
+# else:
+#     print("else")
+
+# 조건문의 간소화
+
+# score = 85
+#
+# result = "합격" if score >= 80 else "불합격"
+#
+# print(result)
+
+# # 1부터 9까지 각 정수의 합 구하기
+#
+# i = 1
+# result = 0
+#
+# # i 가 9보다 작거나 같을 때 아래 코드를 반복적으로 실행
+# while i <= 9:
+#     result += i
+#     i += 1
+#
+# print(result)
+
+# # 1부터 9까지 홀수의 합 구하기
+#
+# i = 1
+# result = 0
+#
+# # i 가 9보다 작거나 같을 때 아래 코드를 반복적으로 실행
+# while i <= 9:
+#     if i % 2 == 1:
+#         result += i
+#     i += 1
+#
+# print(result)
+
+# for i in range(1, 100, 3):
+#     print(i)
+
+# def add(a,b):
+#     return a + b
+#
+# print(add(3,7))
+
+
+# a = 0
+#
+# def func():
+#     global a
+#     a += 1
+#
+# for i in range(10):
+#     func()
+#
+#
+# print(a)
+
+# def operator(a, b):
+#     add_var = a + b
+#     subtract_var = a - b
+#     multiply_var = a * b
+#     divide_var = a / b
+#     return add_var, subtract_var, multiply_var, divide_var
+#
+# a , b , c , d = operator(7, 3)
+# print(a,b,c,d)
+
+
+# # 람다 표현식
+# def add(a, b):
+#     return a + b
+#
+# # 일반적인 add() 메서드 사용
+# print(add(3,7))
+#
+# # 람다 표현식으로 구현한 add() 메서드
+# print((lambda a,b: a + b)(3,7))
+
+
+# array = [('홍길동', 50),('이순신', 32),('아무개', 74)]
+#
+# def my_key(x):
+#     return x[1]
+#
+# print(sorted(array, key=my_key))
+# print(sorted(array, key=lambda x: x[1]))
+
+# list1 = [1,2,3,4,5]
+# list2 = [6,7,8,9,10]
+#
+# result = map(lambda a, b: a + b, list1, list2)
+#
+# print(list(result))
+
+# # 자주 사용되는 내장 함수
+#
+# # sum()
+# result = sum([1,2,3,4,5])
+# print(result)
+#
+# # min(), max()
+# min_result = min(7, 3, 5, 2)
+# max_result = max(7, 3, 5, 2)
+# print(min_result, max_result)
+#
+# # eval()
+# result = eval("(3+5)*7")
+# print(result)
+
+# # sorted()
+# result = sorted([9, 1, 8, 5, 4])
+# reverse_result = sorted([9, 1, 8, 5, 4], reverse=True)
+# print(result)
+# print(reverse_result)
+#
+# # sorted() with key
+# array = [('홍길동', 35), ('이순신', 75), ('아무개', 50)]
+# result = sorted(array, key=lambda x: x[1], reverse=True)
+# print(result)
+
+# from itertools import permutations
+# data = ['A','B','C] # 데이터 준비
+#
+# result = list(permutations(data, 3)) # 모든 순열 구하기
+# print(result)
+
+# from itertools import combinations
+#
+# data = ['A', 'B', 'C'] # 데이터 준비
+#
+# res = list(combinations(data, 2))# 2개를 뽑는 모든 조합 구하기
+# print(res)
+
+from itertools import product
+
+data = ['A','B','C'] # 데이터 준비
+
+result = list(product(data, repeat=2)) # 2개를 뽑는 모든 순열 구하기(중복 허용)
+print(result)
+
+from itertools import combinations_with_replacement
+
+data = ['A', 'B', 'C'] # 데이터 준비
+
+result = list(combinations_with_replacement(data,2)) # 2개를 뽑는 모든 조합 구하기(중복 허용)
+
+print(result)
