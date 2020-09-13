@@ -145,6 +145,53 @@
 # a = list(map(int, input().split()))
 # print(a)
 
-a,b,c,d,e = map(int, input().split())
+# a,b,c,d,e = map(int, input().split())
+#
+# print(a,b,c,d,e)
 
-print(a,b,c,d,e)
+
+# '''
+# 3
+# 4
+# 0 0 0 0
+# 0 0 0 0
+# 0 0 0 0
+# 0 0 0 0
+# '''
+#
+# n = int(input())
+# m = int(input())
+#
+# arr = []
+# for i in range(n):
+#     arr.append(list(map(int,input().split())))
+#
+# print(arr)
+
+# import sys
+# # 문자열 입력 받기
+# data = sys.stdin.readline().rstrip()
+# print(data)
+
+# # 자주 사용되는 표준 출력 방법
+# print(8, end=' ')
+# print(10)
+
+# # 출력할 변수들
+# a = 1
+# b = 2
+# print(a, b)
+# print(7, end=" ")
+# print(8, end=" ")
+#
+# # 출력할 변수
+# answer = 7
+# print(" 정답은 "+str(answer) + "입니다.")
+
+# a = 10
+#
+# if a > 7 :
+#     print(a)
+#     print("출력 완료")
+# print("조건문 끝")
+
