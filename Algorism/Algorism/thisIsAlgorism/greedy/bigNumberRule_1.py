@@ -16,7 +16,6 @@ second = data[n-2]
 6 6 6 5
 6 6 6 5
 '''
-
 count = int(m / (k+1)) * k
 count += m % (k+1)
 
