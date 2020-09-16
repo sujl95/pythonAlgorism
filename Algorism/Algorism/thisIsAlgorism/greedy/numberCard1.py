@@ -10,3 +10,4 @@ for i in range(n):
             min_value = j
 result = min_value
 print(result)
+
