@@ -11,3 +11,6 @@ for i in range(n):
 result = min_value
 print(result)
 
+
+
+
