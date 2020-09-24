@@ -1,56 +1,79 @@
-str1 = "1000000000"
-data = list(map(int,str1))
+b = '10987'
+for i in range(len(b)):
+    if (b[i] == '0'):
+        continue
 
-print(data)
+    # Stores the current number having
+    # current digit one less than current
+    # digit in b
+    curr = list(b)
+    print(curr[i], '변경 전')
+    curr[i] = str(((ord(curr[i]) - ord('0')) - 1) + ord('0'))
+    print(curr[i], '변경 후')
 
+    # Replace all following digits with 9
+    # to maximise the product
+    for j in range(i + 1, len(curr)):
+        curr[j] = str(ord('9'))
+
+        # Convert string to number
+    num = 0
+    for c in curr:
+        num = num * 10 + (int(c) - ord('0'))
+
+print(num)
+
+
+
+# # Python3 Program to find the number
+# # in a range having maximum product
+# # of the digits
 #
-ck = True
-str2 = ""
-while ck:
-    for i in range(len(str1)):
-
-        if i == 1 and data[i] == 0:
-            data[0] -= 1
-        if data[i] == 0:
-            data[i] = 9
-
-    ck = False
-    break
-
-res = ""
-for i in range(len(data)):
-    if i == 0 and data[0] == 0:
-        continue
-    res += str(data[i])
-
-resInt = 1
-for i in data:
-    resInt *= i
-
-result = ""
-for i in range(len(data)):
-    if i == 0 and data[0] == 0:
-        continue
-    if i == 0:
-        result += str(data[i])
-    elif i == 1 and 1 < len(str1):
-        result += str(data[i]-1)
-    else:
-        result += "9"
-
-resInt2 = 1
-for i in result:
-    resInt2 *= int(i)
-print(resInt2)
-print(result)
-print(resInt)
-print(res)
-print(data)
-
-if resInt > resInt2:
-    print(resInt)
-else:
-    print(resInt2)
-
-
-
+# # Returns the product of digits
+# # of number x
+# def product(x):
+#     prod = 1
+#     while (x):
+#         prod *= (x % 10)
+#         x //= 10;
+#
+#     return prod
+#
+#
+# # This function returns the number having
+# # maximum product of the digits
+# def findNumber(l, r):
+#     # Converting both integers to strings
+#     a = str(l);
+#     b = str(r);
+#
+#     # Let the current answer be r
+#     ans = r
+#
+#     for i in range(len(b)):
+#         if (b[i] == '0'):
+#             continue
+#
+#         # Stores the current number having
+#         # current digit one less than current
+#         # digit in b
+#         curr = list(b)
+#         curr[i] = str(((ord(curr[i]) -
+#                         ord('0')) - 1) + ord('0'))
+#
+#         # Replace all following digits with 9
+#         # to maximise the product
+#         for j in range(i + 1, len(curr)):
+#             curr[j] = str(ord('9'))
+#
+#             # Convert string to number
+#         num = 0
+#         for c in curr:
+#             num = num * 10 + (int(c) - ord('0'))
+#
+#             # Check if it lies in range and its
+#         # product is greater than max product
+#         if (num >= l and product(ans) < product(num)):
+#             ans = num
+#
+#     return ans
